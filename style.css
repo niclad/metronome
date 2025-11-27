@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-2: color(display-p3 0.445 0.119 0.14);
+  --color-1: color(display-p3 0.99 0.974 0.628);
+}
+
+/* Normal theme */
+.combo-1 {
+  color: var(--color-1);
+  background-color: var(--color-2);
+}
+
+/* Inverse theme */
+.combo-2 {
+  color: var(--color-2);
+  background-color: var(--color-1);
+}
+
+html {
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Styles for footer */
+.info-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.info-row > *:not(:last-child) {
+    border-right: 1px solid var(--color-1);
+    padding-right: 20px;
+}
+
+footer {
+    margin-top: auto;
+    border-top: 1px solid var(--color-1);
+}
+
+/* Styles for header */
+header {
+    margin-bottom: auto;
+}
+
+header h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styles for main content */
+div.container {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* General button styles */
+.theme-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--color-1);
+    background-color: var(--color-2);
+    border: 4px solid var(--color-1);
+}
+
+.theme-button:hover {
+    background-color: var(--color-1);
+    color: var(--color-2);
+    box-shadow: 
+        4px 4px 0 var(--color-2),
+        8px 8px 0 var(--color-1);
+}
+
+/* Styles for controls */
+.control-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.control-button {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#tempo-display {
+    font-size: 64px;
+    font-weight: bold;
+    width: 150px;
+    text-align: center;
+    background-color: var(--color-2);
+    border: 4px solid var(--color-1);
+    color: var(--color-1);
+}
+
+#tempo-display:focus-visible {
+    outline: none;
+    box-shadow: 
+        4px 4px 0 var(--color-2),
+        8px 8px 0 var(--color-1);
+}
+
+#bpm-label {
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+/* Slider styles */
+/* Slider track */
+#tempo-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    width: 300px;
+    background: var(--color-1);
+    outline: none;
+    border-radius: 5px;
+}
+
+/* Slider thumb (handle) */
+#tempo-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--color-1);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid var(--color-2);
+}
+
+#tempo-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--color-1);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid var(--color-2);
+}
+
+/* Slider hover effects */
+#tempo-slider::-webkit-slider-thumb:hover {
+    background: var(--color-2);
+    border: 1px solid var(--color-1);
+}
+
+/* Start/stop buttons */
+#stop-button {
+    /* visibility: hidden; */
+}
+
+.icon-circle-button {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-circle-button svg {
+    width: 32px; 
+    height: 32px;
+}

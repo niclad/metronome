@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Metronome</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body class="combo-1">
+    <div class="container">
+        <header>
+            <h1>Metronome</h1>
+        </header>
+        <main>
+            <input 
+                id="tempo-display" 
+                type="text" 
+                minlength="2" 
+                maxlength="3" 
+                value="120" 
+                pattern="[4-9][0-9]|1[0-9]{2}|20[0-8]"
+                inputmode="numeric"
+            >
+            <p id="bpm-label">BPM</p>
+            <div class="control-row">
+                <button class="theme-button control-button" id="decrease-tempo">-</button>
+                <input type="range" min="40" max="208" value="120" step="1" id="tempo-slider">
+                <button class="theme-button control-button" id="increase-tempo">+</button>
+            </div>
+            <div class="control-row">
+                <button class="theme-button icon-circle-button" id="start-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                        <path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/>
+                    </svg>
+                </button>
+                <button class="theme-button icon-circle-button" id="stop-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                        <path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/>
+                    </svg>
+                </button>
+            </div>
+        </main>
+        <footer>
+            <div class="info-row">
+                <p>Text item 1</p>
+                <p>Text item 2</p>
+                <p>Text item 3</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
